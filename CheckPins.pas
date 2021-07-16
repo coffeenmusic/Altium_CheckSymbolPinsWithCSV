@@ -78,11 +78,11 @@ Begin
      result := 'NIL';
 
      delimList := TStringList.Create;
+     delimList.Delimiter := ';';
+     delimList.StrictDelimiter := True;
      for i:=0 to PinList.Count-1 do
      begin
          delimList.DelimitedText := PinList.Get(i);
-         delimList.StrictDelimiter := True;
-         delimList.Delimiter := ';';
 
          if delimList.Get(0) = PinName then
          begin
@@ -138,6 +138,8 @@ Begin
 
     StrList := TStringList.Create;
     NotFound := TStringList.Create;
+    NotFound.Add('MatchType;PinDesignator;PinDescription;SymbolDescription');
+
     Row := TStringList.Create;
     Try
         StrList.LoadFromFile(importPath); // CSV with pin/package lengths
