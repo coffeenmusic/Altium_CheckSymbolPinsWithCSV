@@ -195,7 +195,7 @@ Begin
         StrList.Free;
     End;
 
-    ShowMessage(IntToStr(exact_cnt) + ' pins match exactly. ' + IntToStr(close_cnt) + ' pins match the pin name but not the pin description. Total pins: ' + IntToStr(total_pins)+'. Check script directory for exported report file.');
+    ShowMessage(IntToStr(exact_cnt) + ' pins match exactly. ' + IntToStr(close_cnt) + ' pins match the pin name but not the pin description. Total pins: ' + IntToStr(total_pins)+'. Check pin_list.csv dir for exported report file.');
 
     importPath := RemoveFileNameFromPath(importPath);
     NotFound.SaveToFile(importPath+'UnmatchedPins.txt');
