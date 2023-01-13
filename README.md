@@ -1,7 +1,7 @@
 # Steps to Run Script
 - Open the library symbol
-- Run the script by opening the script project and running the ImportPinPackLenForm.pas. DXP --> Run Script...
-- Click Browse Button and select the csv to import with Designator & Description
+- Run the script by opening the script project and running the CheckPins.pas. DXP --> Run Script...
+- Click Browse Button and select the csv to import with Designator & Description (Make sure file isn't open)
 - Click Execute Button
 
 ### CSV File Format

@@ -57,8 +57,9 @@ Begin
      begin
          if pin.ObjectId = ePin then
          begin
-             symPinName := pin.Designator;
-             symPinDesc := pin.Name;
+
+             symPinName := Trim(pin.Designator);
+             symPinDesc := Trim(pin.Name);
 
              PinList.Add(symPinName+';'+symPinDesc);
          end;
@@ -159,8 +160,8 @@ Begin
                 Exit;
             end;
 
-            PinName := Row.Get(0);
-            PinDescription := Row.Get(1);
+            PinName := Trim(Row.Get(0));
+            PinDescription := Trim(Row.Get(1));
 
             match_idx := AllPins.IndexOf(PinName+';'+PinDescription);
 
